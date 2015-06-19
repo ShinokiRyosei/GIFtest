@@ -13,6 +13,7 @@
 		BE6F79161B32B10A00136648 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6F79151B32B10A00136648 /* Images.xcassets */; };
 		BE6F79191B32B10A00136648 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE6F79171B32B10A00136648 /* LaunchScreen.xib */; };
 		BE6F79251B32B10A00136648 /* SwiftGIFtestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F79241B32B10A00136648 /* SwiftGIFtestTests.swift */; };
+		BE6F79311B32B11700136648 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6F79301B32B11700136648 /* UIImage+animatedGIF.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		BE6F791E1B32B10A00136648 /* SwiftGIFtestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGIFtestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6F79231B32B10A00136648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE6F79241B32B10A00136648 /* SwiftGIFtestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGIFtestTests.swift; sourceTree = "<group>"; };
+		BE6F792E1B32B11600136648 /* SwiftGIFtest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftGIFtest-Bridging-Header.h"; sourceTree = "<group>"; };
+		BE6F792F1B32B11700136648 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		BE6F79301B32B11700136648 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,15 @@
 		BE6F790B1B32B10A00136648 /* SwiftGIFtest */ = {
 			isa = PBXGroup;
 			children = (
+				BE6F792F1B32B11700136648 /* UIImage+animatedGIF.h */,
+				BE6F79301B32B11700136648 /* UIImage+animatedGIF.m */,
 				BE6F790E1B32B10A00136648 /* AppDelegate.swift */,
 				BE6F79101B32B10A00136648 /* ViewController.swift */,
 				BE6F79121B32B10A00136648 /* Main.storyboard */,
 				BE6F79151B32B10A00136648 /* Images.xcassets */,
 				BE6F79171B32B10A00136648 /* LaunchScreen.xib */,
 				BE6F790C1B32B10A00136648 /* Supporting Files */,
+				BE6F792E1B32B11600136648 /* SwiftGIFtest-Bridging-Header.h */,
 			);
 			path = SwiftGIFtest;
 			sourceTree = "<group>";
@@ -213,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE6F79111B32B10A00136648 /* ViewController.swift in Sources */,
+				BE6F79311B32B11700136648 /* UIImage+animatedGIF.m in Sources */,
 				BE6F790F1B32B10A00136648 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,9 +348,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftGIFtest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftGIFtest/SwiftGIFtest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +361,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftGIFtest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftGIFtest/SwiftGIFtest-Bridging-Header.h";
 			};
 			name = Release;
 		};
